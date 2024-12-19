@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าหลัก</title>
+    <style>
+        /* General styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #eaf4ff, #ffffff); /* พื้นหลังแบบ Gradient */
+            color: #333;
+        }
+
+        /* Header */
+        .header {
+            background-color: #007bff;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Logo */
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        /* Login button */
+        .login-button {
+            background-color: #ffffff;
+            color: #007bff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .login-button:hover {
+            background-color: #0056b3;
+            color: #ffffff;
+        }
+
+        /* Navigation menu */
+        .nav-menu {
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-item {
+            margin: 0 15px;
+        }
+
+        .nav-item a {
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            color: #007bff;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .nav-item a:hover {
+            background-color: #007bff;
+            color: #ffffff;
+        }
+
+        .nav-item a.active {
+            background-color: #0056b3;
+            color: #ffffff;
+        }
+
+        /* Content */
+        .content {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .content h1 {
+            font-size: 36px;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .content p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+            color: #666;
+            margin-top: 40px;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">ETB</div>
+        <a href="#" class="login-button">เข้าสู่ระบบ</a>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="nav-menu">
+        <div class="nav-item">
+            <a href="{% url 'home' %}" class="active">หน้าหลัก</a>
+        </div>
+        <div class="nav-item">
+            <a href="{% url 'view_items' %}">ดูรายการซื้อของ</a>
+        </div>
+        <div class="nav-item">
+            <a href="{% url 'add_item' %}">เพิ่มรายการซื้อของ</a>
+        </div>
+        <div class="nav-item">
+            <a href="{% url 'group_items' %}">จัดกลุ่มรายการตามหมวดหมู่</a>
+        </div>
+        <div class="nav-item">
+            <a href="{% url 'view_items' %}">ดูรายการซื้อของทั้งหมด</a>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <h1>ยินดีต้อนรับ</h1>
+        <p>นี่คือหน้าหลักของคุณ</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        &copy; 2024 ETB. All rights reserved.
+    </div>
+</body>
+</html>
